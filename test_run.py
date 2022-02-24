@@ -2,7 +2,8 @@ from yaregger import Init
 
 
 def main():
-    obj = Init('yablokov', '12345')
+    RUCAPTCHA = ''
+    obj = Init('yablokov', '12345', RUCAPTCHA)
     obj.register_account()
 
     data = obj.return_data(txt_writing = False)
