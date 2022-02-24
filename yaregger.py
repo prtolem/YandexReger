@@ -249,7 +249,7 @@ class Init:
         )
 
         if txt_writing:
-            with open(self.text_file, 'a+') as f:
+            with open(self.text_file, 'a+', encoding="utf-8") as f:
                 f.write(data + "\n")
 
         return data
