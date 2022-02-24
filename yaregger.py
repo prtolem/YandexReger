@@ -52,7 +52,7 @@ def regexp(text, pattern):
 
 class Init:
 
-    def __init__(self, user_name = None, password = None, RUCAPTCHA_KEY = 'a0c779f5651571b3427e74a91b29415b', text_file = 'ready.txt'):
+    def __init__(self, user_name = None, password = None, RUCAPTCHA_KEY = None, text_file = 'ready.txt'):
         self.user_name = user_name
         self.password = password
 
@@ -240,7 +240,7 @@ class Init:
         if self.registred == False:
             return 'Аккаунт не зарегистрирован'
 
-        data = '%s;%s;%s;%s;%s' % (
+        data = '%s:%s:%s:%s:%s' % (
             self.user_name,
             self.password,
             self.answer,
